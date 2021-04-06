@@ -37,7 +37,7 @@ std::valarray<double> InterpolNewton::CalcInPoints(std::valarray<double> p) {
 
     return retv;
 }
-#include <iostream>
+
 double InterpolNewton::_calc_coef(int iter) {
     double res;
     if (iter == 0)
@@ -46,7 +46,6 @@ double InterpolNewton::_calc_coef(int iter) {
         _f_x.at(i) = (_f_x.at(i + 1) - _f_x.at(i)) / (_x.at(i + iter) - _x.at(i));
     res = _f_x.at(0);
     _f_x.erase(_f_x.end() - 1);
-    std::cout << _f_x.size() << std::endl;
     return res;
 }
 
