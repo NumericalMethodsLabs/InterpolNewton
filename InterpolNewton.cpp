@@ -50,6 +50,6 @@ double InterpolNewton::_calc_coef(int iter) {
 }
 
 void InterpolNewton::_generate_coefs() {
-    for (int i = 0; i <= _x.size(); ++i)
+    for (int i = 0; i < _x.size(); ++i)
         _divdiff_coefs.push_back(_calc_coef(i));
 }
